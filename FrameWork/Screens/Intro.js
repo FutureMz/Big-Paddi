@@ -3,16 +3,16 @@ import React from 'react'
 import { AppButton } from '../Components/AppButton'
 import { Theme } from '../Components/Theme'
 
-export function Intro() {
+export function Intro({ navigation }) {
     return (
         <View style={{ flex: 1 }}>
             <ImageBackground source={require("../../assets/Intro2.jpg")} style={styles.bg}>
                 <View style={styles.overlay}>
                     <View style={{ marginTop: 40 }}>
                         <Text style={{ fontFamily: Theme.fonts.text200, color: "#ffffff", fontSize: 25, textAlign: "center" }}>Welcome to <Text style={{ fontFamily: Theme.fonts.brand, }}>Big Paddi.</Text></Text>
-                        <Text style={{ fontFamily: Theme.fonts.text200, color: "#ffffff", fontSize: 15, textAlign: "center" }}>Real estate money in your pocket!</Text>
+                        <Text style={{ fontFamily: Theme.fonts.text200, color: "#ffffff", fontSize: 15, textAlign: "center" }}>A platform where you can buy and sell goods all around the world!</Text>
                     </View>
-                    <AppButton>Get Started</AppButton>
+                    <AppButton onPress={()=>navigation.navigate("Login")}>Get Started</AppButton>
                 </View>
             </ImageBackground>
         </View>

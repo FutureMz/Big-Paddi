@@ -9,8 +9,9 @@ import * as Font from 'expo-font';
 // import { StackNavigator } from "./Framework/Navigators/StackNavigator";
 // import { Preloader } from "./Framework/Components/Preloader";
 // import { AppProvider } from "./global/globalVariables";
-import { RootSiblingParent } from "react-native-root-siblings";
-import { LoginSignup } from './FrameWork/Screens/LoginSignup';
+import { RootSiblingParent } from "react-native-root-siblings"; 
+import { StackNavigator } from "./FrameWork/Navigation/StackNavigator";
+import { NavigationContainer } from "@react-navigation/native";
 
 
 export default function App() {
@@ -53,7 +54,9 @@ export default function App() {
 
   return (
     <RootSiblingParent>
-      <LoginSignup/>
+      <NavigationContainer>
+      <StackNavigator/>
+      </NavigationContainer>
       </RootSiblingParent>
   );
 }
