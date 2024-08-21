@@ -40,7 +40,7 @@ export function Login({navigation}) {
 </View>
 
 <View style={{paddingVertical: 50}}>
-    <AppButton>Login</AppButton>
+    <AppButton onPress={()=>navigation.navigate("Home")}>Login</AppButton>
 </View>
 
 <View style={{flexDirection:'row', alignSelf:'center',}}>

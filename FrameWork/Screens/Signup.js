@@ -60,7 +60,7 @@ export function Signup({navigation}) {
 </View>
 
 <View style={{marginTop:30}}>
-    <AppButton>Signup</AppButton>
+    <AppButton onPress={()=>navigation.navigate("Profile")}>Signup</AppButton>
 </View>
 
 <View style={{flexDirection:'row', alignSelf:'center', marginTop:30}}>
